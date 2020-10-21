@@ -1,0 +1,30 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+            <th>ID:</th>
+            <th>UserId:</th>
+             <th>Title</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let mvs of store; let i=index">
+            <tr>
+                <td>{{mvs.id}}</td>
+                <td>{{mvs.userId}}</td>
+                <td>{{mvs.title}}</td>
+                <td><button (click)="delete(i)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<form action="" (ngSubmit)="onSubmit()" >
+    <input type="text" name="nm" id="nm" [(ngModel)]="id">
+    <input type="text" name="nm1" id="nm1" [(ngModel)]="userId">
+    <input type="text" name="nm2" id="nm2" [(ngModel)]="title">
+    <button type="submit" class ="btn btn-primary">AddTodos</button>
+</form>
+    
+    
+    
+

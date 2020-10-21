@@ -1,0 +1,6 @@
+<app-show-data 
+*ngFor="let otpt of resultData" 
+[inpt]="otpt" 
+(deleteTodos)="deleteItms($event)"></app-show-data>
+<app-add (addTodos)="addingTodos($event)">AddTodos</app-add>
+

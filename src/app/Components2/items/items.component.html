@@ -1,0 +1,23 @@
+
+<form action="" (ngSubmit)="onSubmit()" #fnForm1="ngForm">
+    <input type="text" name="nm" id="nm" [(ngModel)]="userId">
+    <input type="text" name="nm3" id="nm2" [(ngModel)]="id">
+    <input type="text" name="nm3" id="nm3" [(ngModel)]="title">
+    <input type="text" name="nm4" id="nm4" [(ngModel)]="completed">
+    <button type="submit">Collecting</button>
+</form>
+
+<div *ngFor="let pt of res1; let i=index">
+    {{pt.id}}
+    {{pt.userId}}
+    {{pt.title}}
+    <br>
+    <button type="button" (click)="delete(i)">Delete</button>
+</div>
+
+<app-adding-assets (addingAssets)="addingVils($event)"></app-adding-assets>
+
+
+
+
+ 
